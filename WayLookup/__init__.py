@@ -76,6 +76,8 @@ class DUTWayLookup(object):
         self.WayLookup_writePtr_value = xsp.XPin(xsp.XData(0, xsp.XData.Out), self.event)
         self.WayLookup_io_write_ready_0 = xsp.XPin(xsp.XData(0, xsp.XData.Out), self.event)
         self.WayLookup_entries_30_waymask_0 = xsp.XPin(xsp.XData(0, xsp.XData.Out), self.event)
+        self.WayLookup_gpf_entry_valid = xsp.XPin(xsp.XData(0, xsp.XData.Out), self.event)
+        self.WayLookup_gpf_entry_bits_gpaddr = xsp.XPin(xsp.XData(0, xsp.XData.Out), self.event)
 
 
         # BindDPI
@@ -125,6 +127,8 @@ class DUTWayLookup(object):
         self.WayLookup_writePtr_value.BindDPIPtr(self.dut.GetDPIHandle("WayLookup_writePtr_value", 0), self.dut.GetDPIHandle("WayLookup_writePtr_value", 1))
         self.WayLookup_io_write_ready_0.BindDPIPtr(self.dut.GetDPIHandle("WayLookup_io_write_ready_0", 0), self.dut.GetDPIHandle("WayLookup_io_write_ready_0", 1))
         self.WayLookup_entries_30_waymask_0.BindDPIPtr(self.dut.GetDPIHandle("WayLookup_entries_30_waymask_0", 0), self.dut.GetDPIHandle("WayLookup_entries_30_waymask_0", 1))
+        self.WayLookup_gpf_entry_valid.BindDPIPtr(self.dut.GetDPIHandle("WayLookup_gpf_entry_valid", 0), self.dut.GetDPIHandle("WayLookup_gpf_entry_valid", 1))
+        self.WayLookup_gpf_entry_bits_gpaddr.BindDPIPtr(self.dut.GetDPIHandle("WayLookup_gpf_entry_bits_gpaddr", 0), self.dut.GetDPIHandle("WayLookup_gpf_entry_bits_gpaddr", 1))
 
 
         # Add2Port
@@ -174,6 +178,8 @@ class DUTWayLookup(object):
         self.xport.Add("WayLookup_writePtr_value", self.WayLookup_writePtr_value.xdata)
         self.xport.Add("WayLookup_io_write_ready_0", self.WayLookup_io_write_ready_0.xdata)
         self.xport.Add("WayLookup_entries_30_waymask_0", self.WayLookup_entries_30_waymask_0.xdata)
+        self.xport.Add("WayLookup_gpf_entry_valid", self.WayLookup_gpf_entry_valid.xdata)
+        self.xport.Add("WayLookup_gpf_entry_bits_gpaddr", self.WayLookup_gpf_entry_bits_gpaddr.xdata)
 
 
         # Cascaded ports
@@ -181,6 +187,7 @@ class DUTWayLookup(object):
         self.WayLookup_entries = self.xport.NewSubPort("WayLookup_entries_")
         self.WayLookup_entries_30 = self.xport.NewSubPort("WayLookup_entries_30_")
         self.WayLookup_entries_30_waymask = self.xport.NewSubPort("WayLookup_entries_30_waymask_")
+        self.WayLookup_gpf_entry = self.xport.NewSubPort("WayLookup_gpf_entry_")
         self.WayLookup_io_write_ready = self.xport.NewSubPort("WayLookup_io_write_ready_")
         self.WayLookup_readPtr = self.xport.NewSubPort("WayLookup_readPtr_")
         self.WayLookup_writePtr = self.xport.NewSubPort("WayLookup_writePtr_")

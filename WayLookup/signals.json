@@ -12,6 +12,20 @@
                 }
             }
         },
+        "gpf_entry": {
+            "bits_gpaddr": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "reg",
+                "_": true
+            },
+            "valid": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "reg",
+                "_": true
+            }
+        },
         "io_write_ready": {
             "0": {
                 "High": -1,

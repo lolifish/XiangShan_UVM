@@ -2,3 +2,5 @@
 ./picker
 __pycache__
 test.py
+VWayLookup_coverage.dat
+WayLookup.fst
