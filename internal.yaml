@@ -1,4 +1,10 @@
 WayLookup:
-  - gpf_entry_valid
-  - gpf_entry_bits_gpaddr
-  
+  - "reg readPtr_flag"
+  - "reg [4:0] readPtr_value"
+  - "reg writePtr_flag"
+  - "reg [4:0] writePtr_value"
+  - "wire io_write_ready_0"
+  - "reg entries_30_waymask_0"
+
+  - "reg gpf_entry_valid"
+  - "reg gpf_entry_bits_gpaddr"

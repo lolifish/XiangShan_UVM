@@ -42,7 +42,7 @@
                 "_": true
             },
             "value": {
-                "High": -1,
+                "High": 4,
                 "Low": 0,
                 "Pin": "reg",
                 "_": true
@@ -56,7 +56,7 @@
                 "_": true
             },
             "value": {
-                "High": -1,
+                "High": 4,
                 "Low": 0,
                 "Pin": "reg",
                 "_": true
