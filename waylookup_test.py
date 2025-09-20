@@ -2,26 +2,6 @@ import asyncio
 import random
 from WayLookup import DUTWayLookup
 
-class PointerUpdateModel:
-    def __init__(self, depth=32):
-        self.depth = depth
-        self.readPtr_value = 0
-        self.readPtr_flag = 0
-        self.writePtr_value = 0
-        self.writePtr_flag = 0
-    
-    def read(self):
-        self.readPtr_value += 1
-        if (self.readPtr_value >= self.depth):
-            self.readPtr_value = 0
-            self.readPtr_flag ^= 1
-
-    def write(self):
-        self.writePtr_value += 1
-        if (self.writePtr_value >= self.depth):
-            self.writePtr_value = 0
-            self.writePtr_flag ^= 1
-
 class PointerUpdateDriver:
     def __init__(self, dut: DUTWayLookup, model: PointerUpdateModel):
         self.dut = dut
