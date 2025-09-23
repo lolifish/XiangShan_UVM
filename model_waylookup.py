@@ -1,7 +1,7 @@
 from dataclasses import dataclass
 from typing import Optional, Tuple
 
-def _get_41_6(data):
+def get_41_6(data):
     return (data >> 6) & ((1 << 36) - 1)
 
 # 指针数据
@@ -75,6 +75,11 @@ class WaylookupModel:
             return False, None, False, None
         # 读数据
         data: EntryData = self.entries[self.read_ptr.value]
+        # 更新读指针
+        self.read_ptr.value += 1
+        if (self.read_ptr.value >= self.depth):
+            self.read_ptr.value = 0
+            self.read_ptr.flag ^= 1
         # 是否GPF_hit
         gpf_hit = self.gpf_hit
         if gpf_hit:
@@ -82,11 +87,6 @@ class WaylookupModel:
             self._gpf_valid = False
         else:
             gpf_data = None
-        # 更新读指针
-        self.read_ptr.value += 1
-        if (self.read_ptr.value >= self.depth):
-            self.read_ptr.value = 0
-            self.read_ptr.flag ^= 1
         # 返回数据
         return True, data, gpf_hit, gpf_data
         
@@ -102,7 +102,7 @@ class WaylookupModel:
         # 写数据
         self.entries[self.write_ptr.value] = data
         # 检查gpf
-        if (data.itlb_exception_0 or data.itlb_exception_1):
+        if (data.itlb_exception_0==2 or data.itlb_exception_1==2):
             self._gpf_valid = True
             self.gpf_data = gpf_data
             self.gpf_ptr = self.write_ptr
@@ -128,7 +128,7 @@ class WaylookupModel:
             self.write_ptr.value = 0
             self.write_ptr.flag ^= 1
         # 如果Bypass存在gpf信息，不使能gpf_valid
-        have_gpf = data.itlb_exception_0 or data.itlb_exception_1
+        have_gpf = data.itlb_exception_0==2 or data.itlb_exception_1==2
         # 直接返回数据
         return True, data, have_gpf, gpf_data
     
@@ -137,13 +137,14 @@ class WaylookupModel:
         for i in range(self.depth):
             data = self.entries[i]
             # 对第0行
-            vset_same = data.vSetIdx_0 == update_data.vSetIdx
-            ptag_same = data.ptag_0 == _get_41_6(update_data.blkPaddr)
+            vset_same = (data.vSetIdx_0 == update_data.vSetIdx) and (not update_data.corrupt)
+            ptag_same = data.ptag_0 == get_41_6(update_data.blkPaddr)
             way_same = data.waymask_0 == update_data.waymask
             # 命中更新
             if (vset_same and ptag_same):
                 data.waymask_0 = update_data.waymask
-                data.meta_codes_0 = update_data.corrupt
+                data.meta_codes_0 = bin(data.ptag_0).count("1") % 2
+
                 hit = True
             # 非命中更新
             elif (vset_same and way_same):
@@ -151,13 +152,13 @@ class WaylookupModel:
                 hit = True
 
             # 对第1行
-            vset_same = data.vSetIdx_1 == update_data.vSetIdx
-            ptag_same = data.ptag_1 == _get_41_6(update_data.blkPaddr)
+            vset_same = (data.vSetIdx_1 == update_data.vSetIdx) and (not update_data.corrupt) 
+            ptag_same = data.ptag_1 == get_41_6(update_data.blkPaddr)
             way_same = data.waymask_1 == update_data.waymask
             # 命中更新
             if (vset_same and ptag_same):
                 data.waymask_1 = update_data.waymask
-                data.meta_codes_1 = update_data.corrupt
+                data.meta_codes_1 = bin(data.ptag_1).count("1") % 2
                 hit = True
             # 非命中更新
             elif (vset_same and way_same):
@@ -177,4 +178,4 @@ class WaylookupModel:
     @property
     def gpf_hit(self) -> bool:
         """读取是否包含gpf信息"""
-        return (self.read_ptr == self.gpf_ptr and self._gpf_valid)
+        return ((self.read_ptr == self.gpf_ptr) and self._gpf_valid)

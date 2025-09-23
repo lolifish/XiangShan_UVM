@@ -75,7 +75,7 @@ class DUTWayLookup(object):
         self.WayLookup_writePtr_flag = xsp.XPin(xsp.XData(0, xsp.XData.Out), self.event)
         self.WayLookup_writePtr_value = xsp.XPin(xsp.XData(5, xsp.XData.Out), self.event)
         self.WayLookup_gpf_entry_valid = xsp.XPin(xsp.XData(0, xsp.XData.Out), self.event)
-        self.WayLookup_gpf_entry_bits_gpaddr = xsp.XPin(xsp.XData(0, xsp.XData.Out), self.event)
+        self.WayLookup_gpf_entry_bits_gpaddr = xsp.XPin(xsp.XData(56, xsp.XData.Out), self.event)
         self.WayLookup_entries_0_vSetIdx_0 = xsp.XPin(xsp.XData(8, xsp.XData.Out), self.event)
         self.WayLookup_entries_0_vSetIdx_1 = xsp.XPin(xsp.XData(8, xsp.XData.Out), self.event)
         self.WayLookup_entries_0_waymask_0 = xsp.XPin(xsp.XData(4, xsp.XData.Out), self.event)
@@ -88,6 +88,8 @@ class DUTWayLookup(object):
         self.WayLookup_entries_0_itlb_pbmt_1 = xsp.XPin(xsp.XData(2, xsp.XData.Out), self.event)
         self.WayLookup_entries_0_meta_codes_0 = xsp.XPin(xsp.XData(0, xsp.XData.Out), self.event)
         self.WayLookup_entries_0_meta_codes_1 = xsp.XPin(xsp.XData(0, xsp.XData.Out), self.event)
+        self.WayLookup_vset_same = xsp.XPin(xsp.XData(0, xsp.XData.Out), self.event)
+        self.WayLookup_ptag_same = xsp.XPin(xsp.XData(0, xsp.XData.Out), self.event)
 
 
         # BindDPI
@@ -149,6 +151,8 @@ class DUTWayLookup(object):
         self.WayLookup_entries_0_itlb_pbmt_1.BindDPIPtr(self.dut.GetDPIHandle("WayLookup_entries_0_itlb_pbmt_1", 0), self.dut.GetDPIHandle("WayLookup_entries_0_itlb_pbmt_1", 1))
         self.WayLookup_entries_0_meta_codes_0.BindDPIPtr(self.dut.GetDPIHandle("WayLookup_entries_0_meta_codes_0", 0), self.dut.GetDPIHandle("WayLookup_entries_0_meta_codes_0", 1))
         self.WayLookup_entries_0_meta_codes_1.BindDPIPtr(self.dut.GetDPIHandle("WayLookup_entries_0_meta_codes_1", 0), self.dut.GetDPIHandle("WayLookup_entries_0_meta_codes_1", 1))
+        self.WayLookup_vset_same.BindDPIPtr(self.dut.GetDPIHandle("WayLookup_vset_same", 0), self.dut.GetDPIHandle("WayLookup_vset_same", 1))
+        self.WayLookup_ptag_same.BindDPIPtr(self.dut.GetDPIHandle("WayLookup_ptag_same", 0), self.dut.GetDPIHandle("WayLookup_ptag_same", 1))
 
 
         # Add2Port
@@ -210,6 +214,8 @@ class DUTWayLookup(object):
         self.xport.Add("WayLookup_entries_0_itlb_pbmt_1", self.WayLookup_entries_0_itlb_pbmt_1.xdata)
         self.xport.Add("WayLookup_entries_0_meta_codes_0", self.WayLookup_entries_0_meta_codes_0.xdata)
         self.xport.Add("WayLookup_entries_0_meta_codes_1", self.WayLookup_entries_0_meta_codes_1.xdata)
+        self.xport.Add("WayLookup_vset_same", self.WayLookup_vset_same.xdata)
+        self.xport.Add("WayLookup_ptag_same", self.WayLookup_ptag_same.xdata)
 
 
         # Cascaded ports

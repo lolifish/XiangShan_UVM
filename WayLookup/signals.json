@@ -92,7 +92,7 @@
         },
         "gpf_entry": {
             "bits_gpaddr": {
-                "High": -1,
+                "High": 55,
                 "Low": 0,
                 "Pin": "reg",
                 "_": true
@@ -103,6 +103,12 @@
                 "Pin": "reg",
                 "_": true
             }
+        },
+        "ptag_same": {
+            "High": -1,
+            "Low": 0,
+            "Pin": "wire",
+            "_": true
         },
         "readPtr": {
             "flag": {
@@ -117,6 +123,12 @@
                 "Pin": "reg",
                 "_": true
             }
+        },
+        "vset_same": {
+            "High": -1,
+            "Low": 0,
+            "Pin": "wire",
+            "_": true
         },
         "writePtr": {
             "flag": {
