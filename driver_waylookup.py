@@ -21,6 +21,12 @@ class WaylookupDriver():
         self.dut.Step()
         self.dut.io_flush.value = 0
         self.dut.Step()
+    
+    def reset(self):
+        self.dut.reset.value = 1
+        self.dut.Step()
+        self.dut.reset.value = 0
+        self.dut.Step()
 
     
     def read(self) -> Tuple[bool, Optional[EntryData], bool, Optional[GpfData]]:

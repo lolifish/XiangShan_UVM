@@ -145,7 +145,7 @@ if __name__ == "__main__":
     assert data_driver == data_model
     assert data_driver.waymask_0 == update_data_hit.waymask
     assert data_driver.meta_codes_0 == bin(entry_data1.ptag_0).count("1") % 2
-    print("✅Passed: Update not hit")
+    print("✅Passed: Update hit")
 
     # 未命中更新
     success_driver = driver.write(deepcopy(entry_data1), GpfData())

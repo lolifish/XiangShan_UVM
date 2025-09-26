@@ -62,6 +62,10 @@ class WaylookupModel:
         self.gpf_data = GpfData()
         self._gpf_valid = False
         self.gpf_hit
+    
+    def reset(self):
+        """reset，直接和flush一样"""
+        self.flush()
 
     def read(self) -> Tuple[bool, Optional[EntryData], bool, Optional[GpfData]]:
         """Waylookup读入数据
@@ -144,7 +148,6 @@ class WaylookupModel:
             if (vset_same and ptag_same):
                 data.waymask_0 = update_data.waymask
                 data.meta_codes_0 = bin(data.ptag_0).count("1") % 2
-
                 hit = True
             # 非命中更新
             elif (vset_same and way_same):
