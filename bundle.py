@@ -87,10 +87,16 @@ bundle_dict = {
     "writePtr_flag": "WayLookup_writePtr_flag",
 }
 
-if __name__ == "__main__":
+def get_bind_bundle():
     from WayLookup import DUTWayLookup
+    from toffee import start_clock
+    dut = DUTWayLookup()
+    start_clock(dut)
+    bundle = WaylookupBundle.from_dict(bundle_dict)
+    bundle.bind(dut)
+    return bundle
 
+if __name__ == "__main__":
     dut = DUTWayLookup()
     bundle = WaylookupBundle.from_dict(bundle_dict)
-
     bundle.bind(dut)
