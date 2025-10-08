@@ -1,52 +1,19 @@
-from dataclasses import dataclass
 from typing import Optional, Tuple
+from toffee.model import Model, driver_hook
 
-def get_41_6(data):
+from data_model import *
+
+def get_41_6(data):  
     return (data >> 6) & ((1 << 36) - 1)
 
-# 指针数据
-@dataclass(eq=True)
-class PtrData:
-    value: int = 0
-    flag: int = 0
-
-# Entry数据
-@dataclass(eq=True)
-class EntryData:
-    vSetIdx_0: int = 0
-    vSetIdx_1: int = 0
-    waymask_0: int = 0
-    waymask_1: int = 0
-    ptag_0: int = 0
-    ptag_1: int = 0
-    itlb_exception_0: int = 0
-    itlb_exception_1: int = 0
-    itlb_pbmt_0: int = 0
-    itlb_pbmt_1: int = 0
-    meta_codes_0: int = 0
-    meta_codes_1: int = 0
-
-# GPF数据
-@dataclass(eq=True)
-class GpfData:
-    gpaddr: int = 0
-    isForVSnonLeafPTE: int = 0
-
-# Update数据
-@dataclass()
-class UpdateData:
-    blkPaddr: int = 0
-    vSetIdx: int = 0
-    waymask: int = 0
-    corrupt: int = 0
-
-
 # Waylookup的功能模型
-class WaylookupModel:
+class WaylookupModel(Model):
     def __init__(self, depth=32):
+        super().__init__()
         self.depth = depth
         self.flush()
     
+    @driver_hook(agent_name="agent")
     def flush(self):
         """刷新"""
         # 指针信息
@@ -63,10 +30,12 @@ class WaylookupModel:
         self._gpf_valid = False
         self.gpf_hit
     
+    @driver_hook(agent_name="agent")
     def reset(self):
         """reset，直接和flush一样"""
         self.flush()
 
+    @driver_hook(agent_name="agent")
     def read(self) -> Tuple[bool, Optional[EntryData], bool, Optional[GpfData]]:
         """Waylookup读入数据
         bool: 读是否成功
@@ -94,7 +63,7 @@ class WaylookupModel:
         # 返回数据
         return True, data, gpf_hit, gpf_data
         
-
+    @driver_hook(agent_name="agent")
     def write(self, data: EntryData, gpf_data: GpfData) -> bool:
         """Waylookup写入数据"""
         # 如果队列满了则拒绝写
@@ -117,6 +86,7 @@ class WaylookupModel:
             self.write_ptr.flag ^= 1
         return True
     
+    @driver_hook(agent_name="agent")
     def bypass(self, data: EntryData, gpf_data: GpfData) -> Tuple[bool, Optional[EntryData], bool, Optional[GpfData]]:
         """Bypass读的特殊情况"""
         # 是否满足Bypass读的条件
@@ -136,6 +106,7 @@ class WaylookupModel:
         # 直接返回数据
         return True, data, have_gpf, gpf_data
     
+    @driver_hook(agent_name="agent")
     def update(self, update_data: UpdateData) -> bool:
         hit = False
         for i in range(self.depth):
@@ -182,3 +153,4 @@ class WaylookupModel:
     def gpf_hit(self) -> bool:
         """读取是否包含gpf信息"""
         return ((self.read_ptr == self.gpf_ptr) and self._gpf_valid)
+    

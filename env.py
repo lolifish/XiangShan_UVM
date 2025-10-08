@@ -16,11 +16,14 @@ class WaylookupEnv(Env):
 
 
 if __name__ == "__main__":
+    from model import WaylookupModel
+
     async def test_job():
         dut = DUTWayLookup()
         dut.InitClock("clock")
         toffee.start_clock(dut)
         env = WaylookupEnv(dut)
+        env.attach(WaylookupModel())
         await env.agent.reset()
         a, b, c, d = await env.agent.read()
         print(a, b, c, d)
