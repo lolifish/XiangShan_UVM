@@ -14,6 +14,7 @@ class WaylookupEnv(Env):
         self.agent = WaylookupAgent(self.bundle)
         self.bundle.set_all(0)
 
+
 if __name__ == "__main__":
     async def test_job():
         dut = DUTWayLookup()
