@@ -9,20 +9,7 @@ from agent import WaylookupAgent
 from env import WaylookupEnv
 from data_model import *
 
-@toffee_test.fixture
-async def waylookup_env(request: toffee_test.ToffeeRequest):
-    dut = DUTWayLookup()
-    dut.InitClock("clock")
-    toffee.start_clock(dut)
-
-    waylookup_env = WaylookupEnv(dut)
-    waylookup_env.dut.reset.value = 1
-    waylookup_env.dut.Step(10)
-    waylookup_env.dut.reset.value = 0
-    waylookup_env.dut.Step(10)
-    yield waylookup_env
-    waylookup_env.dut.Finish()
-    set_line_coverage(request, "VWayLookup_coverage.dat")
+from fixture import waylookup_env
 
 @toffee_test.testcase
 async def test_direct(waylookup_env: WaylookupEnv):

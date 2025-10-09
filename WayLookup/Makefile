@@ -15,6 +15,13 @@ export VPI := OFF
 export RW_TYPE := DPI
 export NPROC := `nproc`
 
+ifeq ($(SIMULATOR), verilator)
+MEM_DIRECT_TARGET_FILE := build/DPIWayLookup/VWayLookup___024root.h
+endif
+ifeq ($(SIMULATOR), gsim)
+MEM_DIRECT_TARGET_FILE := build/_SRC/WayLookup.h
+endif
+
 all: release 
 
 compile:
@@ -27,14 +34,15 @@ compile:
 	@echo -n "[TIME LOG] verilator build END: " && date +%s.%3N
 
 ifeq ($(RW_TYPE), MEM_DIRECT)
-ifeq ($(SIMULATOR), verilator)
+ifdef MEM_DIRECT_TARGET_FILE
+	@echo "MEM_DIRECT_TARGET_FILE: ${MEM_DIRECT_TARGET_FILE}"
 # file exsit check with Makefile
-ifeq ($(wildcard build/DPIWayLookup/VWayLookup___024root.h),)
+ifeq ($(wildcard ${MEM_DIRECT_TARGET_FILE}),)
 	@echo -n "[TIME LOG] mem_direct export START: " && date +%s.%3N
 	@rm -rf mem_direct
-	@/usr/local/bin/picker export build/DPIWayLookup/VWayLookup___024root.h \
+	@/usr/local/bin/picker export ${MEM_DIRECT_TARGET_FILE} \
 		--source_dir /usr/local/share/picker/template/mem_direct --target_dir ./mem_direct \
-		--source_module_name WayLookup
+		--source_module_name WayLookup --sim verilator
 	@echo -n "[TIME LOG] mem_direct export END: " && date +%s.%3N
 endif
 	@echo -n "[TIME LOG] mem_direct gen START: " && date +%s.%3N
@@ -47,7 +55,9 @@ endif
 
 release: compile
 	@cp -r build/${TARGET} .
-	@cp dut_base.hpp ${TARGET}/dut_base.hpp
+	@cp build/_SRC/*.h ${TARGET}/ 2>/dev/null|| true
+	@cp build/_SRC/*.hpp ${TARGET}/ 2>/dev/null|| true
+	@cp *.hpp ${TARGET}/
 	@cp mem_direct/WayLookup_offset.yaml ${TARGET}/WayLookup_offset.yaml 2>/dev/null|| true
 	@make -f mk/${TLANG}.mk
 	

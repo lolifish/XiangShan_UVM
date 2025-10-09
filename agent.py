@@ -1,4 +1,4 @@
-from bundle import WaylookupBundle, get_bind_bundle
+from bundle import WaylookupBundle
 from toffee.agent import driver_method, Agent
 from data_model import *
 from WayLookup import DUTWayLookup
@@ -169,13 +169,3 @@ class WaylookupAgent(Agent):
         return True, entry_data, has_gpf, gpf_data
 
 
-
-if __name__ == "__main__":
-    async def test_job():
-        bundle = get_bind_bundle()
-        agent = WaylookupAgent(bundle)
-        await agent.flush()
-        a, b, c, d = await agent.read()
-        print(a, b, c, d)
-
-    toffee.run(test_job())

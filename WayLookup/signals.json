@@ -88,6 +88,502 @@
                         "_": true
                     }
                 }
+            },
+            "1": {
+                "waymask": {
+                    "0": {
+                        "High": 3,
+                        "Low": 0,
+                        "Pin": "reg",
+                        "_": true
+                    },
+                    "1": {
+                        "High": 3,
+                        "Low": 0,
+                        "Pin": "reg",
+                        "_": true
+                    }
+                }
+            },
+            "10": {
+                "waymask": {
+                    "0": {
+                        "High": 3,
+                        "Low": 0,
+                        "Pin": "reg",
+                        "_": true
+                    },
+                    "1": {
+                        "High": 3,
+                        "Low": 0,
+                        "Pin": "reg",
+                        "_": true
+                    }
+                }
+            },
+            "11": {
+                "waymask": {
+                    "0": {
+                        "High": 3,
+                        "Low": 0,
+                        "Pin": "reg",
+                        "_": true
+                    },
+                    "1": {
+                        "High": 3,
+                        "Low": 0,
+                        "Pin": "reg",
+                        "_": true
+                    }
+                }
+            },
+            "12": {
+                "waymask": {
+                    "0": {
+                        "High": 3,
+                        "Low": 0,
+                        "Pin": "reg",
+                        "_": true
+                    },
+                    "1": {
+                        "High": 3,
+                        "Low": 0,
+                        "Pin": "reg",
+                        "_": true
+                    }
+                }
+            },
+            "13": {
+                "waymask": {
+                    "0": {
+                        "High": 3,
+                        "Low": 0,
+                        "Pin": "reg",
+                        "_": true
+                    },
+                    "1": {
+                        "High": 3,
+                        "Low": 0,
+                        "Pin": "reg",
+                        "_": true
+                    }
+                }
+            },
+            "14": {
+                "waymask": {
+                    "0": {
+                        "High": 3,
+                        "Low": 0,
+                        "Pin": "reg",
+                        "_": true
+                    },
+                    "1": {
+                        "High": 3,
+                        "Low": 0,
+                        "Pin": "reg",
+                        "_": true
+                    }
+                }
+            },
+            "15": {
+                "waymask": {
+                    "0": {
+                        "High": 3,
+                        "Low": 0,
+                        "Pin": "reg",
+                        "_": true
+                    },
+                    "1": {
+                        "High": 3,
+                        "Low": 0,
+                        "Pin": "reg",
+                        "_": true
+                    }
+                }
+            },
+            "16": {
+                "waymask": {
+                    "0": {
+                        "High": 3,
+                        "Low": 0,
+                        "Pin": "reg",
+                        "_": true
+                    },
+                    "1": {
+                        "High": 3,
+                        "Low": 0,
+                        "Pin": "reg",
+                        "_": true
+                    }
+                }
+            },
+            "17": {
+                "waymask": {
+                    "0": {
+                        "High": 3,
+                        "Low": 0,
+                        "Pin": "reg",
+                        "_": true
+                    },
+                    "1": {
+                        "High": 3,
+                        "Low": 0,
+                        "Pin": "reg",
+                        "_": true
+                    }
+                }
+            },
+            "18": {
+                "waymask": {
+                    "0": {
+                        "High": 3,
+                        "Low": 0,
+                        "Pin": "reg",
+                        "_": true
+                    },
+                    "1": {
+                        "High": 3,
+                        "Low": 0,
+                        "Pin": "reg",
+                        "_": true
+                    }
+                }
+            },
+            "19": {
+                "waymask": {
+                    "0": {
+                        "High": 3,
+                        "Low": 0,
+                        "Pin": "reg",
+                        "_": true
+                    },
+                    "1": {
+                        "High": 3,
+                        "Low": 0,
+                        "Pin": "reg",
+                        "_": true
+                    }
+                }
+            },
+            "2": {
+                "waymask": {
+                    "0": {
+                        "High": 3,
+                        "Low": 0,
+                        "Pin": "reg",
+                        "_": true
+                    },
+                    "1": {
+                        "High": 3,
+                        "Low": 0,
+                        "Pin": "reg",
+                        "_": true
+                    }
+                }
+            },
+            "20": {
+                "waymask": {
+                    "0": {
+                        "High": 3,
+                        "Low": 0,
+                        "Pin": "reg",
+                        "_": true
+                    },
+                    "1": {
+                        "High": 3,
+                        "Low": 0,
+                        "Pin": "reg",
+                        "_": true
+                    }
+                }
+            },
+            "21": {
+                "waymask": {
+                    "0": {
+                        "High": 3,
+                        "Low": 0,
+                        "Pin": "reg",
+                        "_": true
+                    },
+                    "1": {
+                        "High": 3,
+                        "Low": 0,
+                        "Pin": "reg",
+                        "_": true
+                    }
+                }
+            },
+            "22": {
+                "waymask": {
+                    "0": {
+                        "High": 3,
+                        "Low": 0,
+                        "Pin": "reg",
+                        "_": true
+                    },
+                    "1": {
+                        "High": 3,
+                        "Low": 0,
+                        "Pin": "reg",
+                        "_": true
+                    }
+                }
+            },
+            "23": {
+                "waymask": {
+                    "0": {
+                        "High": 3,
+                        "Low": 0,
+                        "Pin": "reg",
+                        "_": true
+                    },
+                    "1": {
+                        "High": 3,
+                        "Low": 0,
+                        "Pin": "reg",
+                        "_": true
+                    }
+                }
+            },
+            "24": {
+                "waymask": {
+                    "0": {
+                        "High": 3,
+                        "Low": 0,
+                        "Pin": "reg",
+                        "_": true
+                    },
+                    "1": {
+                        "High": 3,
+                        "Low": 0,
+                        "Pin": "reg",
+                        "_": true
+                    }
+                }
+            },
+            "25": {
+                "waymask": {
+                    "0": {
+                        "High": 3,
+                        "Low": 0,
+                        "Pin": "reg",
+                        "_": true
+                    },
+                    "1": {
+                        "High": 3,
+                        "Low": 0,
+                        "Pin": "reg",
+                        "_": true
+                    }
+                }
+            },
+            "26": {
+                "waymask": {
+                    "0": {
+                        "High": 3,
+                        "Low": 0,
+                        "Pin": "reg",
+                        "_": true
+                    },
+                    "1": {
+                        "High": 3,
+                        "Low": 0,
+                        "Pin": "reg",
+                        "_": true
+                    }
+                }
+            },
+            "27": {
+                "waymask": {
+                    "0": {
+                        "High": 3,
+                        "Low": 0,
+                        "Pin": "reg",
+                        "_": true
+                    },
+                    "1": {
+                        "High": 3,
+                        "Low": 0,
+                        "Pin": "reg",
+                        "_": true
+                    }
+                }
+            },
+            "28": {
+                "waymask": {
+                    "0": {
+                        "High": 3,
+                        "Low": 0,
+                        "Pin": "reg",
+                        "_": true
+                    },
+                    "1": {
+                        "High": 3,
+                        "Low": 0,
+                        "Pin": "reg",
+                        "_": true
+                    }
+                }
+            },
+            "29": {
+                "waymask": {
+                    "0": {
+                        "High": 3,
+                        "Low": 0,
+                        "Pin": "reg",
+                        "_": true
+                    },
+                    "1": {
+                        "High": 3,
+                        "Low": 0,
+                        "Pin": "reg",
+                        "_": true
+                    }
+                }
+            },
+            "3": {
+                "waymask": {
+                    "0": {
+                        "High": 3,
+                        "Low": 0,
+                        "Pin": "reg",
+                        "_": true
+                    },
+                    "1": {
+                        "High": 3,
+                        "Low": 0,
+                        "Pin": "reg",
+                        "_": true
+                    }
+                }
+            },
+            "30": {
+                "waymask": {
+                    "0": {
+                        "High": 3,
+                        "Low": 0,
+                        "Pin": "reg",
+                        "_": true
+                    },
+                    "1": {
+                        "High": 3,
+                        "Low": 0,
+                        "Pin": "reg",
+                        "_": true
+                    }
+                }
+            },
+            "31": {
+                "waymask": {
+                    "0": {
+                        "High": 3,
+                        "Low": 0,
+                        "Pin": "reg",
+                        "_": true
+                    },
+                    "1": {
+                        "High": 3,
+                        "Low": 0,
+                        "Pin": "reg",
+                        "_": true
+                    }
+                }
+            },
+            "4": {
+                "waymask": {
+                    "0": {
+                        "High": 3,
+                        "Low": 0,
+                        "Pin": "reg",
+                        "_": true
+                    },
+                    "1": {
+                        "High": 3,
+                        "Low": 0,
+                        "Pin": "reg",
+                        "_": true
+                    }
+                }
+            },
+            "5": {
+                "waymask": {
+                    "0": {
+                        "High": 3,
+                        "Low": 0,
+                        "Pin": "reg",
+                        "_": true
+                    },
+                    "1": {
+                        "High": 3,
+                        "Low": 0,
+                        "Pin": "reg",
+                        "_": true
+                    }
+                }
+            },
+            "6": {
+                "waymask": {
+                    "0": {
+                        "High": 3,
+                        "Low": 0,
+                        "Pin": "reg",
+                        "_": true
+                    },
+                    "1": {
+                        "High": 3,
+                        "Low": 0,
+                        "Pin": "reg",
+                        "_": true
+                    }
+                }
+            },
+            "7": {
+                "waymask": {
+                    "0": {
+                        "High": 3,
+                        "Low": 0,
+                        "Pin": "reg",
+                        "_": true
+                    },
+                    "1": {
+                        "High": 3,
+                        "Low": 0,
+                        "Pin": "reg",
+                        "_": true
+                    }
+                }
+            },
+            "8": {
+                "waymask": {
+                    "0": {
+                        "High": 3,
+                        "Low": 0,
+                        "Pin": "reg",
+                        "_": true
+                    },
+                    "1": {
+                        "High": 3,
+                        "Low": 0,
+                        "Pin": "reg",
+                        "_": true
+                    }
+                }
+            },
+            "9": {
+                "waymask": {
+                    "0": {
+                        "High": 3,
+                        "Low": 0,
+                        "Pin": "reg",
+                        "_": true
+                    },
+                    "1": {
+                        "High": 3,
+                        "Low": 0,
+                        "Pin": "reg",
+                        "_": true
+                    }
+                }
             }
         },
         "gpf": {
@@ -113,6 +609,384 @@
             }
         },
         "ptag_same": {
+            "1": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "10": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "11": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "12": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "13": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "14": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "15": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "16": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "17": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "18": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "19": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "2": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "20": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "21": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "22": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "23": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "24": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "25": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "26": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "27": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "28": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "29": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "3": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "30": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "31": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "32": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "33": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "34": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "35": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "36": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "37": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "38": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "39": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "4": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "40": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "41": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "42": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "43": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "44": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "45": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "46": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "47": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "48": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "49": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "5": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "50": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "51": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "52": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "53": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "54": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "55": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "56": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "57": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "58": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "59": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "6": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "60": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "61": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "62": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "63": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "7": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "8": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "9": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
             "High": -1,
             "Low": 0,
             "Pin": "wire",
@@ -133,6 +1007,384 @@
             }
         },
         "vset_same": {
+            "1": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "10": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "11": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "12": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "13": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "14": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "15": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "16": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "17": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "18": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "19": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "2": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "20": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "21": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "22": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "23": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "24": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "25": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "26": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "27": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "28": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "29": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "3": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "30": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "31": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "32": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "33": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "34": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "35": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "36": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "37": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "38": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "39": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "4": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "40": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "41": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "42": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "43": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "44": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "45": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "46": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "47": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "48": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "49": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "5": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "50": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "51": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "52": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "53": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "54": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "55": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "56": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "57": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "58": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "59": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "6": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "60": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "61": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "62": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "63": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "7": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "8": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
+            "9": {
+                "High": -1,
+                "Low": 0,
+                "Pin": "wire",
+                "_": true
+            },
             "High": -1,
             "Low": 0,
             "Pin": "wire",

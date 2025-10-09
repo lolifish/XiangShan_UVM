@@ -248,11 +248,11 @@ class DutBase(object):
     def FlushWaveform(self):
         return _UT_WayLookup.DutBase_FlushWaveform(self)
 
-    def OpenWaveform(self):
-        return _UT_WayLookup.DutBase_OpenWaveform(self)
+    def ResumeWaveformDump(self):
+        return _UT_WayLookup.DutBase_ResumeWaveformDump(self)
 
-    def CloseWaveform(self):
-        return _UT_WayLookup.DutBase_CloseWaveform(self)
+    def PauseWaveformDump(self):
+        return _UT_WayLookup.DutBase_PauseWaveformDump(self)
 
     def WaveformEnable(self, enable):
         return _UT_WayLookup.DutBase_WaveformEnable(self, enable)
@@ -266,11 +266,15 @@ class DutBase(object):
     def Restore(self, filename):
         return _UT_WayLookup.DutBase_Restore(self, filename)
 
+    def NativeSignalAddr(self, name):
+        return _UT_WayLookup.DutBase_NativeSignalAddr(self, name)
+
 # Register DutBase in _UT_WayLookup:
 _UT_WayLookup.DutBase_swigregister(DutBase)
 class DutVerilatorBase(DutBase):
     thisown = property(lambda x: x.this.own(), lambda x, v: x.this.own(v), doc="The membership flag")
     __repr__ = _swig_repr
+    pin_address_map = property(_UT_WayLookup.DutVerilatorBase_pin_address_map_get, _UT_WayLookup.DutVerilatorBase_pin_address_map_set)
     sv_scope = property(_UT_WayLookup.DutVerilatorBase_sv_scope_get, _UT_WayLookup.DutVerilatorBase_sv_scope_set)
     top = property(_UT_WayLookup.DutVerilatorBase_top_get, _UT_WayLookup.DutVerilatorBase_top_set)
 
@@ -293,11 +297,11 @@ class DutVerilatorBase(DutBase):
     def FlushWaveform(self):
         return _UT_WayLookup.DutVerilatorBase_FlushWaveform(self)
 
-    def OpenWaveform(self):
-        return _UT_WayLookup.DutVerilatorBase_OpenWaveform(self)
+    def ResumeWaveformDump(self):
+        return _UT_WayLookup.DutVerilatorBase_ResumeWaveformDump(self)
 
-    def CloseWaveform(self):
-        return _UT_WayLookup.DutVerilatorBase_CloseWaveform(self)
+    def PauseWaveformDump(self):
+        return _UT_WayLookup.DutVerilatorBase_PauseWaveformDump(self)
 
     def WaveformEnable(self, enable):
         return _UT_WayLookup.DutVerilatorBase_WaveformEnable(self, enable)
@@ -310,6 +314,9 @@ class DutVerilatorBase(DutBase):
 
     def Restore(self, filename):
         return _UT_WayLookup.DutVerilatorBase_Restore(self, filename)
+
+    def NativeSignalAddr(self, name):
+        return _UT_WayLookup.DutVerilatorBase_NativeSignalAddr(self, name)
 
 # Register DutVerilatorBase in _UT_WayLookup:
 _UT_WayLookup.DutVerilatorBase_swigregister(DutVerilatorBase)
@@ -369,26 +376,40 @@ class DutUnifiedBase(object):
     def SetWaveform(self, *args):
         return _UT_WayLookup.DutUnifiedBase_SetWaveform(self, *args)
 
+    @staticmethod
+    def GetWaveFormat():
+        return _UT_WayLookup.DutUnifiedBase_GetWaveFormat()
+
     def FlushWaveform(self):
         return _UT_WayLookup.DutUnifiedBase_FlushWaveform(self)
 
     def WaveformEnable(self, enable=True):
         return _UT_WayLookup.DutUnifiedBase_WaveformEnable(self, enable)
 
-    def OpenWaveform(self):
-        return _UT_WayLookup.DutUnifiedBase_OpenWaveform(self)
+    def ResumeWaveformDump(self):
+        return _UT_WayLookup.DutUnifiedBase_ResumeWaveformDump(self)
 
-    def CloseWaveform(self):
-        return _UT_WayLookup.DutUnifiedBase_CloseWaveform(self)
+    def PauseWaveformDump(self):
+        return _UT_WayLookup.DutUnifiedBase_PauseWaveformDump(self)
+
+    def WaveformPaused(self):
+        return _UT_WayLookup.DutUnifiedBase_WaveformPaused(self)
 
     def SetCoverage(self, *args):
         return _UT_WayLookup.DutUnifiedBase_SetCoverage(self, *args)
+
+    @staticmethod
+    def GetCovMetrics():
+        return _UT_WayLookup.DutUnifiedBase_GetCovMetrics()
 
     def CheckPoint(self, *args):
         return _UT_WayLookup.DutUnifiedBase_CheckPoint(self, *args)
 
     def Restore(self, *args):
         return _UT_WayLookup.DutUnifiedBase_Restore(self, *args)
+
+    def NativeSignalAddr(self, name):
+        return _UT_WayLookup.DutUnifiedBase_NativeSignalAddr(self, name)
 
 # Register DutUnifiedBase in _UT_WayLookup:
 _UT_WayLookup.DutUnifiedBase_swigregister(DutUnifiedBase)
