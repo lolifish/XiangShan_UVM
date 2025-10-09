@@ -86,508 +86,514 @@ module WayLookup_top();
  );
 
 
-  export "DPI-C" function get_clockxxCAWPMqHHbM;
-  export "DPI-C" function set_clockxxCAWPMqHHbM;
-  export "DPI-C" function get_resetxxCAWPMqHHbM;
-  export "DPI-C" function set_resetxxCAWPMqHHbM;
-  export "DPI-C" function get_io_flushxxCAWPMqHHbM;
-  export "DPI-C" function set_io_flushxxCAWPMqHHbM;
-  export "DPI-C" function get_io_read_readyxxCAWPMqHHbM;
-  export "DPI-C" function set_io_read_readyxxCAWPMqHHbM;
-  export "DPI-C" function get_io_read_validxxCAWPMqHHbM;
-  export "DPI-C" function get_io_read_bits_entry_vSetIdx_0xxCAWPMqHHbM;
-  export "DPI-C" function get_io_read_bits_entry_vSetIdx_1xxCAWPMqHHbM;
-  export "DPI-C" function get_io_read_bits_entry_waymask_0xxCAWPMqHHbM;
-  export "DPI-C" function get_io_read_bits_entry_waymask_1xxCAWPMqHHbM;
-  export "DPI-C" function get_io_read_bits_entry_ptag_0xxCAWPMqHHbM;
-  export "DPI-C" function get_io_read_bits_entry_ptag_1xxCAWPMqHHbM;
-  export "DPI-C" function get_io_read_bits_entry_itlb_exception_0xxCAWPMqHHbM;
-  export "DPI-C" function get_io_read_bits_entry_itlb_exception_1xxCAWPMqHHbM;
-  export "DPI-C" function get_io_read_bits_entry_itlb_pbmt_0xxCAWPMqHHbM;
-  export "DPI-C" function get_io_read_bits_entry_itlb_pbmt_1xxCAWPMqHHbM;
-  export "DPI-C" function get_io_read_bits_entry_meta_codes_0xxCAWPMqHHbM;
-  export "DPI-C" function get_io_read_bits_entry_meta_codes_1xxCAWPMqHHbM;
-  export "DPI-C" function get_io_read_bits_gpf_gpaddrxxCAWPMqHHbM;
-  export "DPI-C" function get_io_read_bits_gpf_isForVSnonLeafPTExxCAWPMqHHbM;
-  export "DPI-C" function get_io_write_readyxxCAWPMqHHbM;
-  export "DPI-C" function get_io_write_validxxCAWPMqHHbM;
-  export "DPI-C" function set_io_write_validxxCAWPMqHHbM;
-  export "DPI-C" function get_io_write_bits_entry_vSetIdx_0xxCAWPMqHHbM;
-  export "DPI-C" function set_io_write_bits_entry_vSetIdx_0xxCAWPMqHHbM;
-  export "DPI-C" function get_io_write_bits_entry_vSetIdx_1xxCAWPMqHHbM;
-  export "DPI-C" function set_io_write_bits_entry_vSetIdx_1xxCAWPMqHHbM;
-  export "DPI-C" function get_io_write_bits_entry_waymask_0xxCAWPMqHHbM;
-  export "DPI-C" function set_io_write_bits_entry_waymask_0xxCAWPMqHHbM;
-  export "DPI-C" function get_io_write_bits_entry_waymask_1xxCAWPMqHHbM;
-  export "DPI-C" function set_io_write_bits_entry_waymask_1xxCAWPMqHHbM;
-  export "DPI-C" function get_io_write_bits_entry_ptag_0xxCAWPMqHHbM;
-  export "DPI-C" function set_io_write_bits_entry_ptag_0xxCAWPMqHHbM;
-  export "DPI-C" function get_io_write_bits_entry_ptag_1xxCAWPMqHHbM;
-  export "DPI-C" function set_io_write_bits_entry_ptag_1xxCAWPMqHHbM;
-  export "DPI-C" function get_io_write_bits_entry_itlb_exception_0xxCAWPMqHHbM;
-  export "DPI-C" function set_io_write_bits_entry_itlb_exception_0xxCAWPMqHHbM;
-  export "DPI-C" function get_io_write_bits_entry_itlb_exception_1xxCAWPMqHHbM;
-  export "DPI-C" function set_io_write_bits_entry_itlb_exception_1xxCAWPMqHHbM;
-  export "DPI-C" function get_io_write_bits_entry_itlb_pbmt_0xxCAWPMqHHbM;
-  export "DPI-C" function set_io_write_bits_entry_itlb_pbmt_0xxCAWPMqHHbM;
-  export "DPI-C" function get_io_write_bits_entry_itlb_pbmt_1xxCAWPMqHHbM;
-  export "DPI-C" function set_io_write_bits_entry_itlb_pbmt_1xxCAWPMqHHbM;
-  export "DPI-C" function get_io_write_bits_entry_meta_codes_0xxCAWPMqHHbM;
-  export "DPI-C" function set_io_write_bits_entry_meta_codes_0xxCAWPMqHHbM;
-  export "DPI-C" function get_io_write_bits_entry_meta_codes_1xxCAWPMqHHbM;
-  export "DPI-C" function set_io_write_bits_entry_meta_codes_1xxCAWPMqHHbM;
-  export "DPI-C" function get_io_write_bits_gpf_gpaddrxxCAWPMqHHbM;
-  export "DPI-C" function set_io_write_bits_gpf_gpaddrxxCAWPMqHHbM;
-  export "DPI-C" function get_io_write_bits_gpf_isForVSnonLeafPTExxCAWPMqHHbM;
-  export "DPI-C" function set_io_write_bits_gpf_isForVSnonLeafPTExxCAWPMqHHbM;
-  export "DPI-C" function get_io_update_validxxCAWPMqHHbM;
-  export "DPI-C" function set_io_update_validxxCAWPMqHHbM;
-  export "DPI-C" function get_io_update_bits_blkPaddrxxCAWPMqHHbM;
-  export "DPI-C" function set_io_update_bits_blkPaddrxxCAWPMqHHbM;
-  export "DPI-C" function get_io_update_bits_vSetIdxxxCAWPMqHHbM;
-  export "DPI-C" function set_io_update_bits_vSetIdxxxCAWPMqHHbM;
-  export "DPI-C" function get_io_update_bits_waymaskxxCAWPMqHHbM;
-  export "DPI-C" function set_io_update_bits_waymaskxxCAWPMqHHbM;
-  export "DPI-C" function get_io_update_bits_corruptxxCAWPMqHHbM;
-  export "DPI-C" function set_io_update_bits_corruptxxCAWPMqHHbM;
-  export "DPI-C" function get_WayLookup_readPtr_flagxxCAWPMqHHbM;
-  export "DPI-C" function get_WayLookup_readPtr_valuexxCAWPMqHHbM;
-  export "DPI-C" function get_WayLookup_writePtr_flagxxCAWPMqHHbM;
-  export "DPI-C" function get_WayLookup_writePtr_valuexxCAWPMqHHbM;
-  export "DPI-C" function get_WayLookup_gpf_entry_validxxCAWPMqHHbM;
-  export "DPI-C" function get_WayLookup_gpf_entry_bits_gpaddrxxCAWPMqHHbM;
-  export "DPI-C" function get_WayLookup_entries_0_vSetIdx_0xxCAWPMqHHbM;
-  export "DPI-C" function get_WayLookup_entries_0_vSetIdx_1xxCAWPMqHHbM;
-  export "DPI-C" function get_WayLookup_entries_0_waymask_0xxCAWPMqHHbM;
-  export "DPI-C" function get_WayLookup_entries_0_waymask_1xxCAWPMqHHbM;
-  export "DPI-C" function get_WayLookup_entries_0_ptag_0xxCAWPMqHHbM;
-  export "DPI-C" function get_WayLookup_entries_0_ptag_1xxCAWPMqHHbM;
-  export "DPI-C" function get_WayLookup_entries_0_itlb_exception_0xxCAWPMqHHbM;
-  export "DPI-C" function get_WayLookup_entries_0_itlb_exception_1xxCAWPMqHHbM;
-  export "DPI-C" function get_WayLookup_entries_0_itlb_pbmt_0xxCAWPMqHHbM;
-  export "DPI-C" function get_WayLookup_entries_0_itlb_pbmt_1xxCAWPMqHHbM;
-  export "DPI-C" function get_WayLookup_entries_0_meta_codes_0xxCAWPMqHHbM;
-  export "DPI-C" function get_WayLookup_entries_0_meta_codes_1xxCAWPMqHHbM;
-  export "DPI-C" function get_WayLookup_vset_samexxCAWPMqHHbM;
-  export "DPI-C" function get_WayLookup_ptag_samexxCAWPMqHHbM;
+  export "DPI-C" function get_clockxxPfBDHOzU4kB;
+  export "DPI-C" function set_clockxxPfBDHOzU4kB;
+  export "DPI-C" function get_resetxxPfBDHOzU4kB;
+  export "DPI-C" function set_resetxxPfBDHOzU4kB;
+  export "DPI-C" function get_io_flushxxPfBDHOzU4kB;
+  export "DPI-C" function set_io_flushxxPfBDHOzU4kB;
+  export "DPI-C" function get_io_read_readyxxPfBDHOzU4kB;
+  export "DPI-C" function set_io_read_readyxxPfBDHOzU4kB;
+  export "DPI-C" function get_io_read_validxxPfBDHOzU4kB;
+  export "DPI-C" function get_io_read_bits_entry_vSetIdx_0xxPfBDHOzU4kB;
+  export "DPI-C" function get_io_read_bits_entry_vSetIdx_1xxPfBDHOzU4kB;
+  export "DPI-C" function get_io_read_bits_entry_waymask_0xxPfBDHOzU4kB;
+  export "DPI-C" function get_io_read_bits_entry_waymask_1xxPfBDHOzU4kB;
+  export "DPI-C" function get_io_read_bits_entry_ptag_0xxPfBDHOzU4kB;
+  export "DPI-C" function get_io_read_bits_entry_ptag_1xxPfBDHOzU4kB;
+  export "DPI-C" function get_io_read_bits_entry_itlb_exception_0xxPfBDHOzU4kB;
+  export "DPI-C" function get_io_read_bits_entry_itlb_exception_1xxPfBDHOzU4kB;
+  export "DPI-C" function get_io_read_bits_entry_itlb_pbmt_0xxPfBDHOzU4kB;
+  export "DPI-C" function get_io_read_bits_entry_itlb_pbmt_1xxPfBDHOzU4kB;
+  export "DPI-C" function get_io_read_bits_entry_meta_codes_0xxPfBDHOzU4kB;
+  export "DPI-C" function get_io_read_bits_entry_meta_codes_1xxPfBDHOzU4kB;
+  export "DPI-C" function get_io_read_bits_gpf_gpaddrxxPfBDHOzU4kB;
+  export "DPI-C" function get_io_read_bits_gpf_isForVSnonLeafPTExxPfBDHOzU4kB;
+  export "DPI-C" function get_io_write_readyxxPfBDHOzU4kB;
+  export "DPI-C" function get_io_write_validxxPfBDHOzU4kB;
+  export "DPI-C" function set_io_write_validxxPfBDHOzU4kB;
+  export "DPI-C" function get_io_write_bits_entry_vSetIdx_0xxPfBDHOzU4kB;
+  export "DPI-C" function set_io_write_bits_entry_vSetIdx_0xxPfBDHOzU4kB;
+  export "DPI-C" function get_io_write_bits_entry_vSetIdx_1xxPfBDHOzU4kB;
+  export "DPI-C" function set_io_write_bits_entry_vSetIdx_1xxPfBDHOzU4kB;
+  export "DPI-C" function get_io_write_bits_entry_waymask_0xxPfBDHOzU4kB;
+  export "DPI-C" function set_io_write_bits_entry_waymask_0xxPfBDHOzU4kB;
+  export "DPI-C" function get_io_write_bits_entry_waymask_1xxPfBDHOzU4kB;
+  export "DPI-C" function set_io_write_bits_entry_waymask_1xxPfBDHOzU4kB;
+  export "DPI-C" function get_io_write_bits_entry_ptag_0xxPfBDHOzU4kB;
+  export "DPI-C" function set_io_write_bits_entry_ptag_0xxPfBDHOzU4kB;
+  export "DPI-C" function get_io_write_bits_entry_ptag_1xxPfBDHOzU4kB;
+  export "DPI-C" function set_io_write_bits_entry_ptag_1xxPfBDHOzU4kB;
+  export "DPI-C" function get_io_write_bits_entry_itlb_exception_0xxPfBDHOzU4kB;
+  export "DPI-C" function set_io_write_bits_entry_itlb_exception_0xxPfBDHOzU4kB;
+  export "DPI-C" function get_io_write_bits_entry_itlb_exception_1xxPfBDHOzU4kB;
+  export "DPI-C" function set_io_write_bits_entry_itlb_exception_1xxPfBDHOzU4kB;
+  export "DPI-C" function get_io_write_bits_entry_itlb_pbmt_0xxPfBDHOzU4kB;
+  export "DPI-C" function set_io_write_bits_entry_itlb_pbmt_0xxPfBDHOzU4kB;
+  export "DPI-C" function get_io_write_bits_entry_itlb_pbmt_1xxPfBDHOzU4kB;
+  export "DPI-C" function set_io_write_bits_entry_itlb_pbmt_1xxPfBDHOzU4kB;
+  export "DPI-C" function get_io_write_bits_entry_meta_codes_0xxPfBDHOzU4kB;
+  export "DPI-C" function set_io_write_bits_entry_meta_codes_0xxPfBDHOzU4kB;
+  export "DPI-C" function get_io_write_bits_entry_meta_codes_1xxPfBDHOzU4kB;
+  export "DPI-C" function set_io_write_bits_entry_meta_codes_1xxPfBDHOzU4kB;
+  export "DPI-C" function get_io_write_bits_gpf_gpaddrxxPfBDHOzU4kB;
+  export "DPI-C" function set_io_write_bits_gpf_gpaddrxxPfBDHOzU4kB;
+  export "DPI-C" function get_io_write_bits_gpf_isForVSnonLeafPTExxPfBDHOzU4kB;
+  export "DPI-C" function set_io_write_bits_gpf_isForVSnonLeafPTExxPfBDHOzU4kB;
+  export "DPI-C" function get_io_update_validxxPfBDHOzU4kB;
+  export "DPI-C" function set_io_update_validxxPfBDHOzU4kB;
+  export "DPI-C" function get_io_update_bits_blkPaddrxxPfBDHOzU4kB;
+  export "DPI-C" function set_io_update_bits_blkPaddrxxPfBDHOzU4kB;
+  export "DPI-C" function get_io_update_bits_vSetIdxxxPfBDHOzU4kB;
+  export "DPI-C" function set_io_update_bits_vSetIdxxxPfBDHOzU4kB;
+  export "DPI-C" function get_io_update_bits_waymaskxxPfBDHOzU4kB;
+  export "DPI-C" function set_io_update_bits_waymaskxxPfBDHOzU4kB;
+  export "DPI-C" function get_io_update_bits_corruptxxPfBDHOzU4kB;
+  export "DPI-C" function set_io_update_bits_corruptxxPfBDHOzU4kB;
+  export "DPI-C" function get_WayLookup_readPtr_flagxxPfBDHOzU4kB;
+  export "DPI-C" function get_WayLookup_readPtr_valuexxPfBDHOzU4kB;
+  export "DPI-C" function get_WayLookup_writePtr_flagxxPfBDHOzU4kB;
+  export "DPI-C" function get_WayLookup_writePtr_valuexxPfBDHOzU4kB;
+  export "DPI-C" function get_WayLookup_gpf_hitxxPfBDHOzU4kB;
+  export "DPI-C" function get_WayLookup_gpf_entry_validxxPfBDHOzU4kB;
+  export "DPI-C" function get_WayLookup_gpf_entry_bits_gpaddrxxPfBDHOzU4kB;
+  export "DPI-C" function get_WayLookup_entries_0_vSetIdx_0xxPfBDHOzU4kB;
+  export "DPI-C" function get_WayLookup_entries_0_vSetIdx_1xxPfBDHOzU4kB;
+  export "DPI-C" function get_WayLookup_entries_0_waymask_0xxPfBDHOzU4kB;
+  export "DPI-C" function get_WayLookup_entries_0_waymask_1xxPfBDHOzU4kB;
+  export "DPI-C" function get_WayLookup_entries_0_ptag_0xxPfBDHOzU4kB;
+  export "DPI-C" function get_WayLookup_entries_0_ptag_1xxPfBDHOzU4kB;
+  export "DPI-C" function get_WayLookup_entries_0_itlb_exception_0xxPfBDHOzU4kB;
+  export "DPI-C" function get_WayLookup_entries_0_itlb_exception_1xxPfBDHOzU4kB;
+  export "DPI-C" function get_WayLookup_entries_0_itlb_pbmt_0xxPfBDHOzU4kB;
+  export "DPI-C" function get_WayLookup_entries_0_itlb_pbmt_1xxPfBDHOzU4kB;
+  export "DPI-C" function get_WayLookup_entries_0_meta_codes_0xxPfBDHOzU4kB;
+  export "DPI-C" function get_WayLookup_entries_0_meta_codes_1xxPfBDHOzU4kB;
+  export "DPI-C" function get_WayLookup_vset_samexxPfBDHOzU4kB;
+  export "DPI-C" function get_WayLookup_ptag_samexxPfBDHOzU4kB;
 
 
-  function void get_clockxxCAWPMqHHbM;
+  function void get_clockxxPfBDHOzU4kB;
     output logic  value;
     value=clock;
   endfunction
 
-  function void set_clockxxCAWPMqHHbM;
+  function void set_clockxxPfBDHOzU4kB;
     input logic  value;
     clock=value;
   endfunction
 
-  function void get_resetxxCAWPMqHHbM;
+  function void get_resetxxPfBDHOzU4kB;
     output logic  value;
     value=reset;
   endfunction
 
-  function void set_resetxxCAWPMqHHbM;
+  function void set_resetxxPfBDHOzU4kB;
     input logic  value;
     reset=value;
   endfunction
 
-  function void get_io_flushxxCAWPMqHHbM;
+  function void get_io_flushxxPfBDHOzU4kB;
     output logic  value;
     value=io_flush;
   endfunction
 
-  function void set_io_flushxxCAWPMqHHbM;
+  function void set_io_flushxxPfBDHOzU4kB;
     input logic  value;
     io_flush=value;
   endfunction
 
-  function void get_io_read_readyxxCAWPMqHHbM;
+  function void get_io_read_readyxxPfBDHOzU4kB;
     output logic  value;
     value=io_read_ready;
   endfunction
 
-  function void set_io_read_readyxxCAWPMqHHbM;
+  function void set_io_read_readyxxPfBDHOzU4kB;
     input logic  value;
     io_read_ready=value;
   endfunction
 
-  function void get_io_read_validxxCAWPMqHHbM;
+  function void get_io_read_validxxPfBDHOzU4kB;
     output logic  value;
     value=io_read_valid;
   endfunction
 
-  function void get_io_read_bits_entry_vSetIdx_0xxCAWPMqHHbM;
+  function void get_io_read_bits_entry_vSetIdx_0xxPfBDHOzU4kB;
     output logic [7:0] value;
     value=io_read_bits_entry_vSetIdx_0;
   endfunction
 
-  function void get_io_read_bits_entry_vSetIdx_1xxCAWPMqHHbM;
+  function void get_io_read_bits_entry_vSetIdx_1xxPfBDHOzU4kB;
     output logic [7:0] value;
     value=io_read_bits_entry_vSetIdx_1;
   endfunction
 
-  function void get_io_read_bits_entry_waymask_0xxCAWPMqHHbM;
+  function void get_io_read_bits_entry_waymask_0xxPfBDHOzU4kB;
     output logic [3:0] value;
     value=io_read_bits_entry_waymask_0;
   endfunction
 
-  function void get_io_read_bits_entry_waymask_1xxCAWPMqHHbM;
+  function void get_io_read_bits_entry_waymask_1xxPfBDHOzU4kB;
     output logic [3:0] value;
     value=io_read_bits_entry_waymask_1;
   endfunction
 
-  function void get_io_read_bits_entry_ptag_0xxCAWPMqHHbM;
+  function void get_io_read_bits_entry_ptag_0xxPfBDHOzU4kB;
     output logic [35:0] value;
     value=io_read_bits_entry_ptag_0;
   endfunction
 
-  function void get_io_read_bits_entry_ptag_1xxCAWPMqHHbM;
+  function void get_io_read_bits_entry_ptag_1xxPfBDHOzU4kB;
     output logic [35:0] value;
     value=io_read_bits_entry_ptag_1;
   endfunction
 
-  function void get_io_read_bits_entry_itlb_exception_0xxCAWPMqHHbM;
+  function void get_io_read_bits_entry_itlb_exception_0xxPfBDHOzU4kB;
     output logic [1:0] value;
     value=io_read_bits_entry_itlb_exception_0;
   endfunction
 
-  function void get_io_read_bits_entry_itlb_exception_1xxCAWPMqHHbM;
+  function void get_io_read_bits_entry_itlb_exception_1xxPfBDHOzU4kB;
     output logic [1:0] value;
     value=io_read_bits_entry_itlb_exception_1;
   endfunction
 
-  function void get_io_read_bits_entry_itlb_pbmt_0xxCAWPMqHHbM;
+  function void get_io_read_bits_entry_itlb_pbmt_0xxPfBDHOzU4kB;
     output logic [1:0] value;
     value=io_read_bits_entry_itlb_pbmt_0;
   endfunction
 
-  function void get_io_read_bits_entry_itlb_pbmt_1xxCAWPMqHHbM;
+  function void get_io_read_bits_entry_itlb_pbmt_1xxPfBDHOzU4kB;
     output logic [1:0] value;
     value=io_read_bits_entry_itlb_pbmt_1;
   endfunction
 
-  function void get_io_read_bits_entry_meta_codes_0xxCAWPMqHHbM;
+  function void get_io_read_bits_entry_meta_codes_0xxPfBDHOzU4kB;
     output logic  value;
     value=io_read_bits_entry_meta_codes_0;
   endfunction
 
-  function void get_io_read_bits_entry_meta_codes_1xxCAWPMqHHbM;
+  function void get_io_read_bits_entry_meta_codes_1xxPfBDHOzU4kB;
     output logic  value;
     value=io_read_bits_entry_meta_codes_1;
   endfunction
 
-  function void get_io_read_bits_gpf_gpaddrxxCAWPMqHHbM;
+  function void get_io_read_bits_gpf_gpaddrxxPfBDHOzU4kB;
     output logic [55:0] value;
     value=io_read_bits_gpf_gpaddr;
   endfunction
 
-  function void get_io_read_bits_gpf_isForVSnonLeafPTExxCAWPMqHHbM;
+  function void get_io_read_bits_gpf_isForVSnonLeafPTExxPfBDHOzU4kB;
     output logic  value;
     value=io_read_bits_gpf_isForVSnonLeafPTE;
   endfunction
 
-  function void get_io_write_readyxxCAWPMqHHbM;
+  function void get_io_write_readyxxPfBDHOzU4kB;
     output logic  value;
     value=io_write_ready;
   endfunction
 
-  function void get_io_write_validxxCAWPMqHHbM;
+  function void get_io_write_validxxPfBDHOzU4kB;
     output logic  value;
     value=io_write_valid;
   endfunction
 
-  function void set_io_write_validxxCAWPMqHHbM;
+  function void set_io_write_validxxPfBDHOzU4kB;
     input logic  value;
     io_write_valid=value;
   endfunction
 
-  function void get_io_write_bits_entry_vSetIdx_0xxCAWPMqHHbM;
+  function void get_io_write_bits_entry_vSetIdx_0xxPfBDHOzU4kB;
     output logic [7:0] value;
     value=io_write_bits_entry_vSetIdx_0;
   endfunction
 
-  function void set_io_write_bits_entry_vSetIdx_0xxCAWPMqHHbM;
+  function void set_io_write_bits_entry_vSetIdx_0xxPfBDHOzU4kB;
     input logic [7:0] value;
     io_write_bits_entry_vSetIdx_0=value;
   endfunction
 
-  function void get_io_write_bits_entry_vSetIdx_1xxCAWPMqHHbM;
+  function void get_io_write_bits_entry_vSetIdx_1xxPfBDHOzU4kB;
     output logic [7:0] value;
     value=io_write_bits_entry_vSetIdx_1;
   endfunction
 
-  function void set_io_write_bits_entry_vSetIdx_1xxCAWPMqHHbM;
+  function void set_io_write_bits_entry_vSetIdx_1xxPfBDHOzU4kB;
     input logic [7:0] value;
     io_write_bits_entry_vSetIdx_1=value;
   endfunction
 
-  function void get_io_write_bits_entry_waymask_0xxCAWPMqHHbM;
+  function void get_io_write_bits_entry_waymask_0xxPfBDHOzU4kB;
     output logic [3:0] value;
     value=io_write_bits_entry_waymask_0;
   endfunction
 
-  function void set_io_write_bits_entry_waymask_0xxCAWPMqHHbM;
+  function void set_io_write_bits_entry_waymask_0xxPfBDHOzU4kB;
     input logic [3:0] value;
     io_write_bits_entry_waymask_0=value;
   endfunction
 
-  function void get_io_write_bits_entry_waymask_1xxCAWPMqHHbM;
+  function void get_io_write_bits_entry_waymask_1xxPfBDHOzU4kB;
     output logic [3:0] value;
     value=io_write_bits_entry_waymask_1;
   endfunction
 
-  function void set_io_write_bits_entry_waymask_1xxCAWPMqHHbM;
+  function void set_io_write_bits_entry_waymask_1xxPfBDHOzU4kB;
     input logic [3:0] value;
     io_write_bits_entry_waymask_1=value;
   endfunction
 
-  function void get_io_write_bits_entry_ptag_0xxCAWPMqHHbM;
+  function void get_io_write_bits_entry_ptag_0xxPfBDHOzU4kB;
     output logic [35:0] value;
     value=io_write_bits_entry_ptag_0;
   endfunction
 
-  function void set_io_write_bits_entry_ptag_0xxCAWPMqHHbM;
+  function void set_io_write_bits_entry_ptag_0xxPfBDHOzU4kB;
     input logic [35:0] value;
     io_write_bits_entry_ptag_0=value;
   endfunction
 
-  function void get_io_write_bits_entry_ptag_1xxCAWPMqHHbM;
+  function void get_io_write_bits_entry_ptag_1xxPfBDHOzU4kB;
     output logic [35:0] value;
     value=io_write_bits_entry_ptag_1;
   endfunction
 
-  function void set_io_write_bits_entry_ptag_1xxCAWPMqHHbM;
+  function void set_io_write_bits_entry_ptag_1xxPfBDHOzU4kB;
     input logic [35:0] value;
     io_write_bits_entry_ptag_1=value;
   endfunction
 
-  function void get_io_write_bits_entry_itlb_exception_0xxCAWPMqHHbM;
+  function void get_io_write_bits_entry_itlb_exception_0xxPfBDHOzU4kB;
     output logic [1:0] value;
     value=io_write_bits_entry_itlb_exception_0;
   endfunction
 
-  function void set_io_write_bits_entry_itlb_exception_0xxCAWPMqHHbM;
+  function void set_io_write_bits_entry_itlb_exception_0xxPfBDHOzU4kB;
     input logic [1:0] value;
     io_write_bits_entry_itlb_exception_0=value;
   endfunction
 
-  function void get_io_write_bits_entry_itlb_exception_1xxCAWPMqHHbM;
+  function void get_io_write_bits_entry_itlb_exception_1xxPfBDHOzU4kB;
     output logic [1:0] value;
     value=io_write_bits_entry_itlb_exception_1;
   endfunction
 
-  function void set_io_write_bits_entry_itlb_exception_1xxCAWPMqHHbM;
+  function void set_io_write_bits_entry_itlb_exception_1xxPfBDHOzU4kB;
     input logic [1:0] value;
     io_write_bits_entry_itlb_exception_1=value;
   endfunction
 
-  function void get_io_write_bits_entry_itlb_pbmt_0xxCAWPMqHHbM;
+  function void get_io_write_bits_entry_itlb_pbmt_0xxPfBDHOzU4kB;
     output logic [1:0] value;
     value=io_write_bits_entry_itlb_pbmt_0;
   endfunction
 
-  function void set_io_write_bits_entry_itlb_pbmt_0xxCAWPMqHHbM;
+  function void set_io_write_bits_entry_itlb_pbmt_0xxPfBDHOzU4kB;
     input logic [1:0] value;
     io_write_bits_entry_itlb_pbmt_0=value;
   endfunction
 
-  function void get_io_write_bits_entry_itlb_pbmt_1xxCAWPMqHHbM;
+  function void get_io_write_bits_entry_itlb_pbmt_1xxPfBDHOzU4kB;
     output logic [1:0] value;
     value=io_write_bits_entry_itlb_pbmt_1;
   endfunction
 
-  function void set_io_write_bits_entry_itlb_pbmt_1xxCAWPMqHHbM;
+  function void set_io_write_bits_entry_itlb_pbmt_1xxPfBDHOzU4kB;
     input logic [1:0] value;
     io_write_bits_entry_itlb_pbmt_1=value;
   endfunction
 
-  function void get_io_write_bits_entry_meta_codes_0xxCAWPMqHHbM;
+  function void get_io_write_bits_entry_meta_codes_0xxPfBDHOzU4kB;
     output logic  value;
     value=io_write_bits_entry_meta_codes_0;
   endfunction
 
-  function void set_io_write_bits_entry_meta_codes_0xxCAWPMqHHbM;
+  function void set_io_write_bits_entry_meta_codes_0xxPfBDHOzU4kB;
     input logic  value;
     io_write_bits_entry_meta_codes_0=value;
   endfunction
 
-  function void get_io_write_bits_entry_meta_codes_1xxCAWPMqHHbM;
+  function void get_io_write_bits_entry_meta_codes_1xxPfBDHOzU4kB;
     output logic  value;
     value=io_write_bits_entry_meta_codes_1;
   endfunction
 
-  function void set_io_write_bits_entry_meta_codes_1xxCAWPMqHHbM;
+  function void set_io_write_bits_entry_meta_codes_1xxPfBDHOzU4kB;
     input logic  value;
     io_write_bits_entry_meta_codes_1=value;
   endfunction
 
-  function void get_io_write_bits_gpf_gpaddrxxCAWPMqHHbM;
+  function void get_io_write_bits_gpf_gpaddrxxPfBDHOzU4kB;
     output logic [55:0] value;
     value=io_write_bits_gpf_gpaddr;
   endfunction
 
-  function void set_io_write_bits_gpf_gpaddrxxCAWPMqHHbM;
+  function void set_io_write_bits_gpf_gpaddrxxPfBDHOzU4kB;
     input logic [55:0] value;
     io_write_bits_gpf_gpaddr=value;
   endfunction
 
-  function void get_io_write_bits_gpf_isForVSnonLeafPTExxCAWPMqHHbM;
+  function void get_io_write_bits_gpf_isForVSnonLeafPTExxPfBDHOzU4kB;
     output logic  value;
     value=io_write_bits_gpf_isForVSnonLeafPTE;
   endfunction
 
-  function void set_io_write_bits_gpf_isForVSnonLeafPTExxCAWPMqHHbM;
+  function void set_io_write_bits_gpf_isForVSnonLeafPTExxPfBDHOzU4kB;
     input logic  value;
     io_write_bits_gpf_isForVSnonLeafPTE=value;
   endfunction
 
-  function void get_io_update_validxxCAWPMqHHbM;
+  function void get_io_update_validxxPfBDHOzU4kB;
     output logic  value;
     value=io_update_valid;
   endfunction
 
-  function void set_io_update_validxxCAWPMqHHbM;
+  function void set_io_update_validxxPfBDHOzU4kB;
     input logic  value;
     io_update_valid=value;
   endfunction
 
-  function void get_io_update_bits_blkPaddrxxCAWPMqHHbM;
+  function void get_io_update_bits_blkPaddrxxPfBDHOzU4kB;
     output logic [41:0] value;
     value=io_update_bits_blkPaddr;
   endfunction
 
-  function void set_io_update_bits_blkPaddrxxCAWPMqHHbM;
+  function void set_io_update_bits_blkPaddrxxPfBDHOzU4kB;
     input logic [41:0] value;
     io_update_bits_blkPaddr=value;
   endfunction
 
-  function void get_io_update_bits_vSetIdxxxCAWPMqHHbM;
+  function void get_io_update_bits_vSetIdxxxPfBDHOzU4kB;
     output logic [7:0] value;
     value=io_update_bits_vSetIdx;
   endfunction
 
-  function void set_io_update_bits_vSetIdxxxCAWPMqHHbM;
+  function void set_io_update_bits_vSetIdxxxPfBDHOzU4kB;
     input logic [7:0] value;
     io_update_bits_vSetIdx=value;
   endfunction
 
-  function void get_io_update_bits_waymaskxxCAWPMqHHbM;
+  function void get_io_update_bits_waymaskxxPfBDHOzU4kB;
     output logic [3:0] value;
     value=io_update_bits_waymask;
   endfunction
 
-  function void set_io_update_bits_waymaskxxCAWPMqHHbM;
+  function void set_io_update_bits_waymaskxxPfBDHOzU4kB;
     input logic [3:0] value;
     io_update_bits_waymask=value;
   endfunction
 
-  function void get_io_update_bits_corruptxxCAWPMqHHbM;
+  function void get_io_update_bits_corruptxxPfBDHOzU4kB;
     output logic  value;
     value=io_update_bits_corrupt;
   endfunction
 
-  function void set_io_update_bits_corruptxxCAWPMqHHbM;
+  function void set_io_update_bits_corruptxxPfBDHOzU4kB;
     input logic  value;
     io_update_bits_corrupt=value;
   endfunction
 
-  function void get_WayLookup_readPtr_flagxxCAWPMqHHbM;
+  function void get_WayLookup_readPtr_flagxxPfBDHOzU4kB;
     output logic  value;
     value=WayLookup.readPtr_flag;
   endfunction
 
-  function void get_WayLookup_readPtr_valuexxCAWPMqHHbM;
+  function void get_WayLookup_readPtr_valuexxPfBDHOzU4kB;
     output logic [4:0] value;
     value=WayLookup.readPtr_value;
   endfunction
 
-  function void get_WayLookup_writePtr_flagxxCAWPMqHHbM;
+  function void get_WayLookup_writePtr_flagxxPfBDHOzU4kB;
     output logic  value;
     value=WayLookup.writePtr_flag;
   endfunction
 
-  function void get_WayLookup_writePtr_valuexxCAWPMqHHbM;
+  function void get_WayLookup_writePtr_valuexxPfBDHOzU4kB;
     output logic [4:0] value;
     value=WayLookup.writePtr_value;
   endfunction
 
-  function void get_WayLookup_gpf_entry_validxxCAWPMqHHbM;
+  function void get_WayLookup_gpf_hitxxPfBDHOzU4kB;
+    output logic  value;
+    value=WayLookup.gpf_hit;
+  endfunction
+
+  function void get_WayLookup_gpf_entry_validxxPfBDHOzU4kB;
     output logic  value;
     value=WayLookup.gpf_entry_valid;
   endfunction
 
-  function void get_WayLookup_gpf_entry_bits_gpaddrxxCAWPMqHHbM;
+  function void get_WayLookup_gpf_entry_bits_gpaddrxxPfBDHOzU4kB;
     output logic [55:0] value;
     value=WayLookup.gpf_entry_bits_gpaddr;
   endfunction
 
-  function void get_WayLookup_entries_0_vSetIdx_0xxCAWPMqHHbM;
+  function void get_WayLookup_entries_0_vSetIdx_0xxPfBDHOzU4kB;
     output logic [7:0] value;
     value=WayLookup.entries_0_vSetIdx_0;
   endfunction
 
-  function void get_WayLookup_entries_0_vSetIdx_1xxCAWPMqHHbM;
+  function void get_WayLookup_entries_0_vSetIdx_1xxPfBDHOzU4kB;
     output logic [7:0] value;
     value=WayLookup.entries_0_vSetIdx_1;
   endfunction
 
-  function void get_WayLookup_entries_0_waymask_0xxCAWPMqHHbM;
+  function void get_WayLookup_entries_0_waymask_0xxPfBDHOzU4kB;
     output logic [3:0] value;
     value=WayLookup.entries_0_waymask_0;
   endfunction
 
-  function void get_WayLookup_entries_0_waymask_1xxCAWPMqHHbM;
+  function void get_WayLookup_entries_0_waymask_1xxPfBDHOzU4kB;
     output logic [3:0] value;
     value=WayLookup.entries_0_waymask_1;
   endfunction
 
-  function void get_WayLookup_entries_0_ptag_0xxCAWPMqHHbM;
+  function void get_WayLookup_entries_0_ptag_0xxPfBDHOzU4kB;
     output logic [35:0] value;
     value=WayLookup.entries_0_ptag_0;
   endfunction
 
-  function void get_WayLookup_entries_0_ptag_1xxCAWPMqHHbM;
+  function void get_WayLookup_entries_0_ptag_1xxPfBDHOzU4kB;
     output logic [35:0] value;
     value=WayLookup.entries_0_ptag_1;
   endfunction
 
-  function void get_WayLookup_entries_0_itlb_exception_0xxCAWPMqHHbM;
+  function void get_WayLookup_entries_0_itlb_exception_0xxPfBDHOzU4kB;
     output logic [1:0] value;
     value=WayLookup.entries_0_itlb_exception_0;
   endfunction
 
-  function void get_WayLookup_entries_0_itlb_exception_1xxCAWPMqHHbM;
+  function void get_WayLookup_entries_0_itlb_exception_1xxPfBDHOzU4kB;
     output logic [1:0] value;
     value=WayLookup.entries_0_itlb_exception_1;
   endfunction
 
-  function void get_WayLookup_entries_0_itlb_pbmt_0xxCAWPMqHHbM;
+  function void get_WayLookup_entries_0_itlb_pbmt_0xxPfBDHOzU4kB;
     output logic [1:0] value;
     value=WayLookup.entries_0_itlb_pbmt_0;
   endfunction
 
-  function void get_WayLookup_entries_0_itlb_pbmt_1xxCAWPMqHHbM;
+  function void get_WayLookup_entries_0_itlb_pbmt_1xxPfBDHOzU4kB;
     output logic [1:0] value;
     value=WayLookup.entries_0_itlb_pbmt_1;
   endfunction
 
-  function void get_WayLookup_entries_0_meta_codes_0xxCAWPMqHHbM;
+  function void get_WayLookup_entries_0_meta_codes_0xxPfBDHOzU4kB;
     output logic  value;
     value=WayLookup.entries_0_meta_codes_0;
   endfunction
 
-  function void get_WayLookup_entries_0_meta_codes_1xxCAWPMqHHbM;
+  function void get_WayLookup_entries_0_meta_codes_1xxPfBDHOzU4kB;
     output logic  value;
     value=WayLookup.entries_0_meta_codes_1;
   endfunction
 
-  function void get_WayLookup_vset_samexxCAWPMqHHbM;
+  function void get_WayLookup_vset_samexxPfBDHOzU4kB;
     output logic  value;
     value=WayLookup.vset_same;
   endfunction
 
-  function void get_WayLookup_ptag_samexxCAWPMqHHbM;
+  function void get_WayLookup_ptag_samexxPfBDHOzU4kB;
     output logic  value;
     value=WayLookup.ptag_same;
   endfunction
@@ -599,8 +605,8 @@ module WayLookup_top();
     $dumpvars(0, WayLookup_top);
   end
 
-  export "DPI-C" function finish_CAWPMqHHbM;
-  function void finish_CAWPMqHHbM;
+  export "DPI-C" function finish_PfBDHOzU4kB;
+  function void finish_PfBDHOzU4kB;
     $finish;
   endfunction
 

@@ -1,9 +1,11 @@
 from random import randint, choice
 from copy import deepcopy
+import asyncio
+
 import toffee_test, toffee
+import toffee.funcov as fc
 from toffee_test.reporter import set_func_coverage
 from toffee_test.reporter import set_line_coverage
-import asyncio
 
 from WayLookup import DUTWayLookup
 from model import WaylookupModel
@@ -40,7 +42,7 @@ def random_data():
     gpf.isForVSnonLeafPTE = randint(0, 1)
     return data, gpf
 def random_update_data(model: WaylookupModel):
-    a = randint(1, 10)
+    a = randint(1, 6)
     entry = choice(model.entries)
     data = UpdateData()
     # 命中
@@ -74,11 +76,46 @@ def random_update_data(model: WaylookupModel):
         data.corrupt = randint(0, 1)
     return data
 
+# 功能点
+g = fc.CovGroup("CovGroup_Waylookup")
+def init_function_coverage(g, dut: DUTWayLookup):
+    # Flush
+    g.add_watch_point(
+        dut.io_flush, 
+        {"flush": lambda x: x.value==1}, 
+        name="flush"
+    )
+    # Ptr的满和空
+    g.add_watch_point(
+        dut,
+        {
+            "Entries empty": lambda x: x.WayLookup_readPtr_value.value==x.WayLookup_writePtr_value.value and x.WayLookup_readPtr_flag.value==x.WayLookup_writePtr_flag.value,
+            "Entries full": lambda x: x.WayLookup_readPtr_value.value==x.WayLookup_writePtr_value.value and x.WayLookup_readPtr_flag.value!=x.WayLookup_writePtr_flag.value,
+        }, name="ptr"
+    )
+    # Gpf hit
+    g.add_watch_point(
+        dut.WayLookup_gpf_hit, {
+            "gpf not hit": lambda x: x.value == 0,
+            "gpf hit": lambda x: x.value ==1,
+        }, name="gpf"
+    )
+    # Update
+    g.add_watch_point(
+        dut, {
+            "update hit": lambda x: x.WayLookup_vset_same.value and x.WayLookup_ptag_same.value,
+            "update miss": lambda x: (x.WayLookup_vset_same.value),
+            "update ignore": lambda x: (not x.WayLookup_vset_same.value) and (not x.WayLookup_ptag_same.value)
+        }, name="update"
+    )
+
 
 @toffee_test.fixture
 async def waylookup_env(request: toffee_test.ToffeeRequest):
     dut = DUTWayLookup()
     dut.InitClock("clock")
+    init_function_coverage(g, dut)
+    dut.StepRis(lambda x: g.sample())
     toffee.start_clock(dut)
 
     waylookup_env = WaylookupEnv(dut)
@@ -89,6 +126,7 @@ async def waylookup_env(request: toffee_test.ToffeeRequest):
     yield waylookup_env
     waylookup_env.dut.Finish()
     set_line_coverage(request, "VWayLookup_coverage.dat")
+    set_func_coverage(request, g)
     
 
 @toffee_test.testcase
@@ -100,11 +138,11 @@ async def test_random(waylookup_env: WaylookupEnv):
     await agent.flush()
     # 随机执行1M次
     data_num = 0
-    for i in range(10000):
+    for i in range(1000000):
         random_number = randint(1, 10000)
 
         # 写入数据
-        if random_number <= 3600:
+        if random_number <= 3650:
             data, gpf = random_data()
             s = await agent.write(deepcopy(data), deepcopy(gpf))
             model.write(deepcopy(data), deepcopy(gpf))

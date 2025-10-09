@@ -3,6 +3,8 @@ WayLookup:
   - "reg [4:0] readPtr_value"
   - "reg writePtr_flag"
   - "reg [4:0] writePtr_value"
+
+  - "wire gpf_hit"
   - "reg gpf_entry_valid"
   - "reg  [55:0]       gpf_entry_bits_gpaddr"
 
