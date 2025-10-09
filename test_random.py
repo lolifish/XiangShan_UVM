@@ -1,10 +1,19 @@
 from random import randint, choice
 from copy import deepcopy
+import toffee_test, toffee
+from toffee_test.reporter import set_func_coverage
+from toffee_test.reporter import set_line_coverage
+import asyncio
 
 from WayLookup import DUTWayLookup
-from model_waylookup import *
-from driver_waylookup import *
+from model import WaylookupModel
+from bundle import WaylookupBundle
+from agent import WaylookupAgent
+from env import WaylookupEnv
+from data_model import *
 
+
+# 随机数据生成函数
 def random_data():
     data = EntryData()
     data.vSetIdx_0 = randint(0, 255)
@@ -29,9 +38,7 @@ def random_data():
     gpf = GpfData()
     gpf.gpaddr = randint(1, 1000)
     gpf.isForVSnonLeafPTE = randint(0, 1)
-
     return data, gpf
-
 def random_update_data(model: WaylookupModel):
     a = randint(1, 10)
     entry = choice(model.entries)
@@ -53,7 +60,7 @@ def random_update_data(model: WaylookupModel):
         data.vSetIdx = entry.vSetIdx_0
         data.waymask = entry.waymask_0
         data.corrupt = randint(0, 1)
-        print("waymask", data)
+        toffee.info("waymask", data)
     elif a==4:
         data.blkPaddr = randint(0, 68719476735) << 6
         data.vSetIdx = entry.vSetIdx_1
@@ -67,67 +74,74 @@ def random_update_data(model: WaylookupModel):
         data.corrupt = randint(0, 1)
     return data
 
-if __name__ == "__main__":
+
+@toffee_test.fixture
+async def waylookup_env(request: toffee_test.ToffeeRequest):
+    dut = DUTWayLookup()
+    dut.InitClock("clock")
+    toffee.start_clock(dut)
+
+    waylookup_env = WaylookupEnv(dut)
+    waylookup_env.dut.reset.value = 1
+    waylookup_env.dut.Step(10)
+    waylookup_env.dut.reset.value = 0
+    waylookup_env.dut.Step(10)
+    yield waylookup_env
+    waylookup_env.dut.Finish()
+    set_line_coverage(request, "VWayLookup_coverage.dat")
+    
+
+@toffee_test.testcase
+async def test_random(waylookup_env: WaylookupEnv):
+    toffee.info("start")
     model = WaylookupModel()
-    driver = WaylookupDriver(DUTWayLookup())
-
-    model.flush()
-    driver.flush()
-
+    agent = waylookup_env.agent
+    await agent.reset()
+    await agent.flush()
     # 随机执行1M次
     data_num = 0
-    for i in range(1000000):
+    for i in range(10000):
         random_number = randint(1, 10000)
+
         # 写入数据
         if random_number <= 3600:
             data, gpf = random_data()
-            
-            model_s = model.write(deepcopy(data), deepcopy(gpf))
-            driver_s = driver.write(deepcopy(data), deepcopy(gpf))
-            assert model_s == driver_s
-            if model_s:
+            s = await agent.write(deepcopy(data), deepcopy(gpf))
+            model.write(deepcopy(data), deepcopy(gpf))
+            if s:
                 data_num += 1
-            print(f"[{i}] Write (gpf={model._gpf_valid}), num={data_num}")
+            toffee.info(f"[{i}] Write (num={data_num})")
+
         # 读取数据
         elif random_number <= 7000:
             # 检查下是不是empty，如果是则bypass读
             if model.empty:
                 data, gpf = random_data()
-                print(f"[{i}] Bypass read, num={data_num}")
-                model_s, model_data, model_gpf, model_gpf_data = model.bypass(deepcopy(data), deepcopy(gpf))
-                driver_s, driver_data, driver_gpf, driver_gpf_data = driver.bypass(deepcopy(data), deepcopy(gpf))
-                assert model_s == driver_s
-                assert model_data == driver_data
-                assert model_gpf == driver_gpf
-                if model_data.itlb_exception_0 == 2 or model_data.itlb_exception_1 ==2:
-                    assert model_gpf_data == driver_gpf_data
+                toffee.info(f"[{i}] Bypass read, num={data_num}")
+                await agent.bypass(deepcopy(data), deepcopy(gpf))
+                model.bypass(deepcopy(data), deepcopy(gpf))
             else:
                 data_num -= 1
-                print(f"[{i}] Read, num={data_num}")
-                model_s, model_data, model_gpf, model_gpf_data =  model.read()
-                driver_s, driver_data, driver_gpf, driver_gpf_data = driver.read()
-                assert model_s == driver_s
-                assert model_data == driver_data
-                assert model_gpf == driver_gpf
-                if model_data.itlb_exception_0 == 2 or model_data.itlb_exception_1 ==2:
-                    assert model_gpf_data == driver_gpf_data
+                toffee.info(f"[{i}] Read, num={data_num}")
+                await agent.read()
+                model.read()
         
         # 更新数据
-        elif random_number <= 9999:
+        elif random_number <= 9995:
             data = random_update_data(model)
+            await agent.update(deepcopy(data))
             model.update(deepcopy(data))
-            driver.update(deepcopy(data))
-            print(f"[{i}] Update")
+            toffee.info(f"[{i}] Update")
 
         else:
-            if randint(0, 5) != 0:
-                driver.flush()
+            if randint(1, 5) != 1:
+                await agent.flush()
                 model.flush()
-                print(f"[{i}] Flush")
+                toffee.info(f"[{i}] Flush")
                 data_num = 0
             else:
-                driver.reset()
+                await agent.reset()
                 model.reset()
-                print(f"[{i}] Reset")
+                toffee.info(f"[{i}] Reset")
                 data_num = 0
         

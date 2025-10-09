@@ -104,7 +104,7 @@ class WaylookupAgent(Agent):
             _wait_cnt += 1
             await self.bundle.step()
         self.bundle.write_valid.value = 0
-        self.bundle.step(5)
+        await self.bundle.step(5)
         # 返回是否成功
         if not success: return False
         else: return True
@@ -159,10 +159,12 @@ class WaylookupAgent(Agent):
         entry_data.meta_codes_1 = self.bundle.read_meta_codes_1.value
         # 读取GPF
         has_gpf = self.bundle.read_itlb_exception_0.value == 2 or self.bundle.read_itlb_exception_1.value == 2
-        gpf_data = GpfData()
         if has_gpf:
+            gpf_data = GpfData()
             gpf_data.gpaddr = self.bundle.read_gpf_gpaddr.value
             gpf_data.isForVSnonLeafPTE = self.bundle.read_gpf_isForVSnonLeafPTE.value
+        else:
+            gpf_data = None
         await self.bundle.step()
         return True, entry_data, has_gpf, gpf_data
 

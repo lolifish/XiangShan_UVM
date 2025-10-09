@@ -103,6 +103,8 @@ class WaylookupModel(Model):
             self.write_ptr.flag ^= 1
         # 如果Bypass存在gpf信息，不使能gpf_valid
         have_gpf = data.itlb_exception_0==2 or data.itlb_exception_1==2
+        if not have_gpf:
+            gpf_data = None
         # 直接返回数据
         return True, data, have_gpf, gpf_data
     
@@ -138,7 +140,6 @@ class WaylookupModel(Model):
             elif (vset_same and way_same):
                 data.waymask_1 = 0
                 hit = True
-        return hit
             
 
     @property
