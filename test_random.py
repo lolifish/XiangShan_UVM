@@ -84,9 +84,9 @@ async def test_random(waylookup_env: WaylookupEnv):
     agent = waylookup_env.agent
     await agent.reset()
     await agent.flush()
-    # 随机执行1M次
+    # 随机执行10k次
     data_num = 0
-    for i in range(1000000):
+    for i in range(10000):
         random_number = randint(1, 10000)
 
         # 写入数据

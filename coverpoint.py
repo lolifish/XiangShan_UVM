@@ -23,6 +23,7 @@ def get_cover_group_flush(bundle: WaylookupBundle):
             "gpf flush": check_flush_gpf,
         }, name="flush", once=False
     )
+    group.mark_function("flush", ["test_direct.test_flush", "test_random.test_random"])
     return group
 
 
@@ -39,7 +40,7 @@ def check_ptr_read_inc(bundle: WaylookupBundle) -> bool:
         return False
 def check_ptr_read_roll(bundle: WaylookupBundle) -> bool:
     global read_value_r, read_flag_r
-    if (not bundle.flush.value) and read_flag_r!=bundle.readPtr_flag.value:
+    if (not bundle.flush.value) and read_flag_r!=bundle.readPtr_flag.value and read_value_r==31:
         read_value_r = 0
         read_flag_r ^= 1
         return True
@@ -57,7 +58,7 @@ def check_ptr_write_inc(bundle: WaylookupBundle) -> bool:
         return False
 def check_ptr_write_roll(bundle: WaylookupBundle) -> bool:
     global write_value_r, write_flag_r
-    if (not bundle.flush.value) and write_flag_r!=bundle.writePtr_flag.value:
+    if (not bundle.flush.value) and write_flag_r!=bundle.writePtr_flag.value and write_value_r==31:
         write_value_r = 0
         write_flag_r ^= 1
         return True
@@ -78,6 +79,8 @@ def get_cover_group_ptr(bundle: WaylookupBundle):
             "writePtr roll over": check_ptr_write_roll,
         }, name="writePtr", once=False
     )
+    group.mark_function("readPtr", ["test_direct.test_ptr_roll", "test_random.test_random"])
+    group.mark_function("writePtr", ["test_direct.test_ptr_roll", "test_random.test_random"])
     return group
 
 
@@ -102,6 +105,7 @@ def get_cover_group_update(bundle):
             "update -not update": check_update_no
         }, name="update", once=False
     )
+    group.mark_function("update", ["test_direct.test_update_hit", "test_direct.test_update_miss", "test_direct.test_update_no", "test_random.test_random"])
     return group
 
 # 读
@@ -137,6 +141,8 @@ def get_cover_group_read(bundle: WaylookupBundle):
             "read gpf not-hit": check_read_gpf_not_hit,
         }, "read gpf info", once=False
     )
+    group.mark_function("read info", ["test_direct.test_read_normal", "test_direct.test_read_bypass", "test_direct.test_read_empty", "test_random.test_random"])
+    group.mark_function("read gpf info", ["test_direct.test_read_gpf", "test_random.test_random"])
     return group
 
 # 写
@@ -167,4 +173,6 @@ def get_cover_group_write(bundle: WaylookupBundle):
             "write gpf normal": check_write_gpf_not_bypass,
         }, "write gpf info", once=False
     )
+    group.mark_function("write info", ["test_direct.test_write_normal", "test_direct.test_write_gpf_valid", "test_direct.test_write_full", "test_random.test_random"])
+    group.mark_function("write gpf info", ["test_direct.test_write_gpf_bypass", "test_direct.test_write_gpf_not_bypass", "test_random.test_random"])
     return group
